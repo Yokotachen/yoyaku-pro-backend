@@ -24,6 +24,7 @@ router.register(r'user', views.UserInfoViewSet)
 
 urlpatterns = [
     path(r'admin/', admin.site.urls),
-    url(r'api/usercontrol', views.UserInfoContrlAPIView.as_view(), name=r'usercontrol'),
+    url(r'api/usernamedupchk/', views.UserNameDupChkAPIView.as_view(), name=r'usernamedupchk'),
+    url(r'api/loginchk/', views.LoginAPIView.as_view(), name=r'loginchk'),
     url(r'api/', include(router.urls))
 ]
